@@ -37,7 +37,7 @@ axios
 
 //SIMPAN
 
-document.getElementById("simpan").addEventListener("click",function(event){
+document.getElementById("form").addEventListener("submit",function(event){
     event.preventDefault();
     const name = document.getElementById("Name").value;
     const address = document.getElementById("Address").value;
@@ -45,13 +45,13 @@ document.getElementById("simpan").addEventListener("click",function(event){
     const phone = document.getElementById("Phone").value;
     const company = document.getElementById("Company").value;
     
-    axios.post("http://localhost:3000/contacts",(
+    axios.post("http://localhost:3000/contacts",{
           name,
           address,
           email,
           phone,
           company
-    ))
+    })
 })
 
 
